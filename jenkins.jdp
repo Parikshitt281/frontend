@@ -17,7 +17,7 @@ pipeline{
         stage('deploy'){
             steps{
                 sh '''
-                    aws s3 --recursive dist/frontend/ s3://ksh-frontend-project-bux/
+                    aws s3 cp --recursive dist/frontend/ s3://ksh-frontend-project-bux/
                 ''' 
             }
          }
